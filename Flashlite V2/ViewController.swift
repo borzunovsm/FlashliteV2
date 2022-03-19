@@ -13,24 +13,23 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .blue
-        
+        colorOfBackground()
         
         // Do any additional setup after loading the view.
     }
 
+    fileprivate func colorOfBackground() {
+        view.backgroundColor = isButtonPressed ? .white : .black
+    }
+   
+    
     @IBAction func buttonPressed() {
         print(#line, #function, isButtonPressed)
         isButtonPressed.toggle()
-        view.backgroundColor = isButtonPressed ? .white : .black
         
-        /*if isButtonPressed {
-            view.backgroundColor = .white
-        }
-        else{
-            view.backgroundColor = .black
-        }*/
+        colorOfBackground()
+        
+      
     }
     
 }
