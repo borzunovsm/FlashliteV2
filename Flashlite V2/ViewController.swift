@@ -8,12 +8,28 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var isButtonPressed = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = .blue
+        
+        
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func buttonPressed() {
+        print(#line, #function, isButtonPressed)
+        isButtonPressed = !isButtonPressed
+        if isButtonPressed {
+            view.backgroundColor = .white
+        }
+        else{
+            view.backgroundColor = .black
+        }
+    }
+    
 }
 
