@@ -22,13 +22,15 @@ class ViewController: UIViewController {
 
     @IBAction func buttonPressed() {
         print(#line, #function, isButtonPressed)
-        isButtonPressed = !isButtonPressed
-        if isButtonPressed {
+        isButtonPressed.toggle()
+        view.backgroundColor = isButtonPressed ? .white : .black
+        
+        /*if isButtonPressed {
             view.backgroundColor = .white
         }
         else{
             view.backgroundColor = .black
-        }
+        }*/
     }
     
 }
