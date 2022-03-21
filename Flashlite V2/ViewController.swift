@@ -7,9 +7,16 @@
 
 import UIKit
 
+
+
+
 class ViewController: UIViewController {
     
-    var isButtonPressed = false
+    var isButtonPressed = true
+    
+    override var prefersStatusBarHidden: Bool{
+        return true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
