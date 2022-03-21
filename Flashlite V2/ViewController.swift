@@ -29,15 +29,16 @@ class ViewController: UIViewController {
         view.backgroundColor = isButtonPressed ? .white : .black
     }
    
-    
-    @IBAction func buttonPressed() {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print(#line, #function, isButtonPressed)
         isButtonPressed.toggle()
         
         colorOfBackground()
+    }
+
         
       
-    }
+    
     
 }
 
